@@ -19,3 +19,32 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
   } 
+
+  nav{
+    display: flex;
+    gap: 20px;
+    background: black;
+    padding: 20px;
+  }
+
+  nav a{
+    color: white;
+    text-decoration: none;
+    transition: 0.6s;
+
+  }
+
+  nav a:hover{
+    color: hotpink;
+  }
+  nav button{
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  a.active{
+    background: mediumpurple;
+    padding: 5px 10px;
+  }

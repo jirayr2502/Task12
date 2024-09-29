@@ -14,7 +14,7 @@ import { handleSignUp } from '../../Lib/api';
 import { useState } from 'react';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form'
 
 const Schema = yup.object({
     name: yup.string()

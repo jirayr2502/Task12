@@ -11,13 +11,27 @@ export interface IUser {
 
 export type InputUser = Omit<IUser, 'id' | 'isPrivate' | 'cover' | 'picture'>
 
+export type ILogin = Omit<InputUser, 'name' | 'surname'>
+
 export interface IResponse {
     status: string
     message?: string
     payload?: unknown
+    user?: IWideUser
 }
 
-export interface ILogin {
-    login: string
-    password: string
+
+export interface IWideUser extends IUser {
+    followers: IUser[]
+    following: IUser[]
+}
+
+export interface IContextType {
+    account: IWideUser
+    setAccount: (user: IWideUser) => void
+}
+
+export interface IChangePwd {
+    old: string
+    newpwd: string
 }
